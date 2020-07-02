@@ -1,0 +1,85 @@
+##
+# CAN COPY THESE OVER TO THE mainVDAMP.py FILE AS NEEDED
+
+# test Multiscale RECON and DECOMP
+#
+# testimage = multiscaleDecomp(x0, 4)
+# print("TEST IMAGE: \n ", testimage)
+# testrecomp = multiscaleRecon(testimage)
+# scales = 2
+# # test matrix, 4x4 from 1 to 16
+# test_mat = np.reshape(np.arange(0,16),(4,4))
+# print("Test Matrix: \n", test_mat)
+# sr, sc = np.shape(test_mat)
+#
+# testbands = multiscaleDecomp(test_mat, scales)
+# print("test bands: \n ", testbands)
+# testrecomp = multiscaleRecon(testbands)
+#
+# test = pyramid(testbands)
+# plt.imshow(abs(test)**0.3)
+#
+# testimage = multiscaleDecomp(im, 4)
+# print("TEST IMAGE: \n ", testimage)
+# testrecomp = multiscaleRecon(testimage)
+
+# test = pyramid(testimage)
+# plt.imshow(abs(test)**0.3)
+
+
+
+# # test HaarSpec : WORKS
+# print ('test HaarSpec')
+# spec = HaarSpec(4, 512)
+# print(spec) #
+# z = np.array([4, 1, 8, 2, 100])
+
+# # TEST COMPLEXSOFT: WORKS
+# print('TEST COMPLEXSOFT')
+# gz,df = complexSoft(z, 0.1)
+# print(gz)
+# print(df)
+
+# # TEST SURESOFT: WORKS
+# V = np.array([0.1, 0.4, 0.3, 0.2, 0.01])
+# print('TEST SURESOFT')
+# gz, df = SUREsoft(z,V)
+# print ('sure GZ: ', gz)
+# print ('sure DF: ', df)
+#
+# lam = []
+# h = 0.1
+# v = 0.1
+# d = 0.1
+# a = 0.1
+# lam.append(Wavelet(h, v, d))
+# lam.append(Wavelet(h, v, d))
+# lam.append(Wavelet(h, v, d))
+# lam.append(Wavelet(h, v, d, a))
+#
+# var = list()
+# var.append(Wavelet(0.0318, 0.0464, 0.0282))
+# var.append(Wavelet(0.0528, 0.0844, 0.0486))
+# var.append(Wavelet(0.1151, 0.1943, 0.0759))
+# var.append(Wavelet(0.3094, 0.5417, 0.2359, 0.6881))
+
+# # TEST multiscaleComplexSoft : WORKS
+# print('TEST multiscaleCOMPLEXSOFT')
+# bands, err, df = multiscaleComplexSoft(testbands, var, lam)
+
+# # TEST multiscaleSUREsoft : WORKS
+# print('TEST MULTISCALESURESOFT')
+# bands, err, df = multiscaleSURESoft(testbands, var)
+
+# # TEST pyramid:
+# bands  = []
+# bands.append(Wavelet(1, 2, 3))
+# bands.append(Wavelet(4, 5, 6))
+# bands.append(Wavelet(7, 8, 9))
+# bands.append(Wavelet(10, 11, 12, 777))
+
+
+# # TEST pyramidInv:
+# im = np.reshape(np.arange(0, 256), (16, 16))
+# test = pyramidInv(im, 4)
+
